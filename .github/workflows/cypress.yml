@@ -1,0 +1,29 @@
+name: Basic Training Tests
+
+on:
+  push:
+    branches:
+      - 01-basic-testing
+  pull_request:
+    branches:
+      - 01-basic-testing
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Code Checkout
+        uses: actions/checkout@v3
+
+      - name: Node.js Setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Cypress Tests
+        uses: cypress-io/github-action@v6
