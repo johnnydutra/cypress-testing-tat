@@ -1,0 +1,19 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "cypress/e2e/*"
+      ]
+    },
+    "types": [
+      "cypress",
+      "node"
+    ]
+  },
+  "include": [
+    "cypress/**/*.ts"
+  ]
+}
