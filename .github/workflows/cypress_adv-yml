@@ -1,4 +1,4 @@
-name: Basic Training Tests
+name: Advanced Training Tests
 
 on:
   push:
