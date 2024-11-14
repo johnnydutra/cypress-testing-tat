@@ -18,3 +18,9 @@ interface Label {
 interface Milestone {
   title: string
 }
+
+type PostProjectResponse = {
+  body: {
+    id: string;
+  }
+}
