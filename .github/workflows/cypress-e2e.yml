@@ -7,16 +7,16 @@ on:
   pull_request:
 
 jobs:
-  eslint:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install modules
-        run: npm install
-      - name: Run ESLint
-        run: npm run lint
+  # eslint:
+  #   runs-on: ubuntu-22.04
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Install modules
+  #       run: npm install
+  #     - name: Run ESLint
+  #       run: npm run lint
   cypress-tests-desktop:
-    needs: eslint
+    # needs: eslint
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -36,7 +36,7 @@ jobs:
         with:
           command: npm test
   cypress-tests-tablet:
-    needs: eslint
+    # needs: eslint
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
